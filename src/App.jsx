@@ -10,6 +10,7 @@ function App() {
     <>
       <h1>Welcome to SkillSwap Community</h1>
       <p>Connect with others to learn and share skills</p>
+      <p>Mohamed Abdulrashid</p>
     </>
   )
 }
