@@ -35,6 +35,15 @@
       "neighborhood": "Downtown",
       "userId": 1,
       "createdAt": "2025-07-22T16:34:57.102Z"
+    },
+    {
+      "id": "8cea",
+      "title": "Coding",
+      "description": "coding",
+      "category": "Coding",
+      "neighborhood": "Downtown",
+      "userId": 1,
+      "createdAt": "2025-07-23T18:45:20.869Z"
     }
   ],
   "users": [
