@@ -1,0 +1,160 @@
+/* AddSkillForm.css */
+.add-skill-form {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 12px; /* Slightly larger radius for modern look */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Softer shadow */
+  transition: transform 0.2s, box-shadow 0.2s; /* Smooth hover effects */
+}
+
+.add-skill-form:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+
+.form-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--primary);
+  font-size: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1.75rem; /* Slightly more spacing */
+  position: relative; /* For floating labels if needed */
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.75rem; /* Increased spacing */
+  font-weight: 600; /* Slightly bolder */
+  color: var(--dark);
+  font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 0.85rem; /* Slightly more padding */
+  border: 1px solid #e0e0e0; /* Lighter border */
+  border-radius: 6px; /* Matching the form radius */
+  font-size: 1rem;
+  transition: border-color 0.3s; /* Smooth transition */
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(67, 97, 238, 0.2); /* Focus ring */
+}
+
+.form-group textarea {
+  min-height: 140px; /* Slightly taller */
+  resize: vertical;
+  line-height: 1.5; /* Better text readability */
+  width: 100%;
+  padding: 0.85rem; /* Consistent padding */
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem; /* Space between buttons */
+  margin-top: 2.5rem; /* More space above buttons */
+}
+
+.submit-btn {
+  background-color: var(--primary);
+  color: white;
+  padding: 0.85rem 2rem; /* More horizontal padding */
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: var(--secondary);
+  transform: translateY(-2px); /* Slight lift effect */
+}
+
+.cancel-btn {
+  background-color: white;
+  color: var(--dark);
+  border: 1px solid #e0e0e0;
+  padding: 0.85rem 2rem;
+  border-radius: 6px;
+  transition: all 0.3s;
+}
+
+.cancel-btn:hover {
+  background-color: #f8f9fa;
+  border-color: var(--primary);
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .add-skill-form {
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+  
+  .form-actions {
+    flex-direction: column; /* Stack buttons on mobile */
+  }
+  
+  .submit-btn,
+  .cancel-btn {
+    width: 100%;
+  }
+}
+
+/* Validation styles */
+.form-group.error input,
+.form-group.error textarea,
+.form-group.error select {
+  border-color: #ff6b6b;
+}
+
+.error-message {
+  color: #ff6b6b;
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+  display: none; /* Hidden by default */
+}
+
+.form-group.error .error-message {
+  display: block; /* Show when error */
+}
+
+.submit-error {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+/* Success message */
+.success-message {
+  background-color: #d4edda;
+  color: #155724;
+  padding: 1rem;
+  border-radius: 4px;
+  margin-top: 1rem;
+  text-align: center;
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Required field indicator */
+label:after {
+  content: ' *';
+  color: #ff6b6b;
+}
