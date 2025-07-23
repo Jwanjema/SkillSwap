@@ -1,18 +1,25 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import SkillsPage from "./pages/SkillsPage";
+import AddSkillPage from "./pages/AddSkillPage";
+import ProfilePage from "./pages/ProfilePage";
+import FavoritesPage from "./pages/FavoritesPage";
+import NavBar from "./components/NavBar";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <h1>Welcome to SkillSwap Community</h1>
-      <p>Connect with others to learn and share skills</p>
-      <p>Mohamed Abdulrashid</p>
-    </>
-  )
+    <BrowserRouter>
+      <NavBar />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/skills" element={<SkillsPage />} />
+        <Route path="/add-skill" element={<AddSkillPage />} />
+        <Route path="/profile" element={<ProfilePage />} />
+        <Route path="/favorites" element={<FavoritesPage />} />
+        <Route path="*" element={<h2 style={{ textAlign: "center", marginTop: "2rem" }}>404 - Page Not Found</h2>} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
