@@ -1,0 +1,93 @@
+{
+  "skills": [
+    {
+      "id": "1",
+      "title": "React Tutoring",
+      "description": "Learn React hooks and modern practices",
+      "category": "Coding",
+      "neighborhood": "Downtown",
+      "userId": 1,
+      "createdAt": "2023-11-15T10:00:00Z"
+    },
+    {
+      "id": "2",
+      "title": "Spanish Lessons",
+      "description": "Conversational Spanish for beginners",
+      "category": "Language",
+      "neighborhood": "Westside",
+      "userId": 2,
+      "createdAt": "2023-11-16T11:30:00Z"
+    },
+    {
+      "id": "3",
+      "title": "Guitar Lessons",
+      "description": "Acoustic guitar for all levels",
+      "category": "Music",
+      "neighborhood": "Midtown",
+      "userId": 3,
+      "createdAt": "2023-11-17T09:15:00Z"
+    },
+    {
+      "id": "4",
+      "title": "Cooking",
+      "description": "I will teach how to cook",
+      "category": "Cooking",
+      "neighborhood": "Downtown",
+      "userId": 1,
+      "createdAt": "2025-07-22T16:34:57.102Z"
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "name": "Alex Johnson",
+      "email": "alex@example.com",
+      "neighborhood": "Downtown",
+      "bio": "React enthusiast and coding tutor"
+    },
+    {
+      "id": "2",
+      "name": "Maria Garcia",
+      "email": "maria@example.com",
+      "neighborhood": "Westside",
+      "bio": "Native Spanish speaker"
+    },
+    {
+      "id": "3",
+      "name": "Jamie Smith",
+      "email": "jamie@example.com",
+      "neighborhood": "Midtown",
+      "bio": "Professional musician"
+    }
+  ],
+  "favorites": [
+    {
+      "id": "b1a2",
+      "skillId": "2",
+      "userId": 1,
+      "createdAt": "2025-07-22T18:00:29.375Z"
+    }
+  ],
+  "categories": [
+    {
+      "id": "1",
+      "name": "Coding"
+    },
+    {
+      "id": "2",
+      "name": "Language"
+    },
+    {
+      "id": "3",
+      "name": "Music"
+    },
+    {
+      "id": "4",
+      "name": "Cooking"
+    },
+    {
+      "id": "5",
+      "name": "Art"
+    }
+  ]
+}
