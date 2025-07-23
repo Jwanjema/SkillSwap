@@ -1,0 +1,77 @@
+/* AddSkillPage.css */
+.add-skill-page {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.add-skill-page h2 {
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.form-container {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-header {
+  margin-bottom: 1.5rem;
+  color: var(--secondary);
+  font-weight: 500;
+}
+
+.form-footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 2rem;
+  gap: 1rem;
+}
+
+.cancel-btn {
+  background-color: #f8f9fa;
+  color: var(--dark);
+  border: 1px solid #ddd;
+}
+
+.cancel-btn:hover {
+  background-color: #e9ecef;
+}
+
+.success-message {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #d4edda;
+  color: #155724;
+  border-radius: 4px;
+  text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .add-skill-page {
+    padding: 0 0.5rem;
+  }
+  
+  .form-container {
+    padding: 1.5rem;
+  }
+  
+  .form-footer {
+    flex-direction: column;
+  }
+}
+
+/* Animation for form submission */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.form-submitted {
+  animation: fadeIn 0.3s ease-out;
+}
