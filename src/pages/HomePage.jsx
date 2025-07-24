@@ -41,11 +41,6 @@ function HomePage() {
       </div>
       <footer className="footer">
   <p>&copy; {new Date().getFullYear()} SkillSwap. All rights reserved.</p>
-  <div className="footer-links">
-    <a href="#">Terms</a>
-    <a href="#">Privacy</a>
-    <a href="#">Contact</a>
-  </div>
 </footer>
 
     </div>
