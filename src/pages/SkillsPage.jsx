@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import axios from 'axios'
 import SkillList from '../components/SkillList'
 import SearchBar from '../components/SearchBar'
+import './SkillsPage.css'
 
 export default function SkillsPage() {
   const [skills, setSkills] = useState([])
@@ -42,13 +43,14 @@ export default function SkillsPage() {
   return (
     <div className="skills-page">
       <SearchBar 
-        searchTerm={searchTerm}
-        setSearchTerm={setSearchTerm}
-        category={category}
-        setCategory={setCategory}
-        nearMe={nearMe}
-        setNearMe={setNearMe}
+      searchTerm={searchTerm}
+      setSearchTerm={setSearchTerm}
+      selectedCategory={category}        
+      setSelectedCategory={setCategory}  
+      nearMe={nearMe}
+      setNearMe={setNearMe}
       />
+
       <SkillList skills={filteredSkills} />
     </div>
   )
