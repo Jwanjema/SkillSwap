@@ -37,15 +37,6 @@
       "createdAt": "2025-07-22T16:34:57.102Z"
     },
     {
-      "id": "8cea",
-      "title": "Coding",
-      "description": "coding",
-      "category": "Coding",
-      "neighborhood": "Downtown",
-      "userId": 1,
-      "createdAt": "2025-07-23T18:45:20.869Z"
-    },
-    {
       "id": "5",
       "title": "Photography Basics",
       "description": "Learn how to take stunning portraits with a DSLR",
@@ -71,13 +62,76 @@
       "neighborhood": "Downtown",
       "userId": 4,
       "createdAt": "2025-07-22T17:45:00Z"
+    },
+    {
+      "id": "8",
+      "title": "Basic Computer Help",
+      "description": "Fix slow computers, install apps, troubleshoot issues",
+      "category": "Tech Support",
+      "neighborhood": "Eastside",
+      "userId": 6,
+      "createdAt": "2025-07-22T18:00:00Z"
+    },
+    {
+      "id": "9",
+      "title": "Fitness Training",
+      "description": "1-on-1 personal training sessions",
+      "category": "Fitness",
+      "neighborhood": "Westside",
+      "userId": 7,
+      "createdAt": "2025-07-22T18:20:00Z"
+    },
+    {
+      "id": "10",
+      "title": "Resume & Interview Coaching",
+      "description": "Tips to land your dream job",
+      "category": "Business",
+      "neighborhood": "Downtown",
+      "userId": 8,
+      "createdAt": "2025-07-22T18:40:00Z"
+    },
+    {
+      "id": "11",
+      "title": "Beginner Salsa Dancing",
+      "description": "Learn salsa steps for social dancing",
+      "category": "Dance",
+      "neighborhood": "Midtown",
+      "userId": 9,
+      "createdAt": "2025-07-22T19:00:00Z"
+    },
+    {
+      "id": "12",
+      "title": "Plant Care & Gardening Tips",
+      "description": "How to grow herbs, succulents, and flowers",
+      "category": "Gardening",
+      "neighborhood": "Eastside",
+      "userId": 10,
+      "createdAt": "2025-07-22T19:30:00Z"
+    },
+    {
+      "id": "13",
+      "title": "DIY Home Repairs",
+      "description": "Learn to patch walls, fix leaks, and hang shelves",
+      "category": "DIY",
+      "neighborhood": "Downtown",
+      "userId": 10,
+      "createdAt": "2025-07-22T20:00:00Z"
+    },
+    {
+      "id": "a2dd",
+      "title": "Swimming",
+      "description": "I will teach people how to swim",
+      "category": "Fitness",
+      "neighborhood": "Eastside",
+      "userId": 1,
+      "createdAt": "2025-07-24T13:09:57.760Z"
     }
   ],
   "users": [
     {
       "id": "1",
-      "name": "Alex Johnson",
-      "email": "alex@example.com",
+      "name": "Hannah Gray",
+      "email": "hannagray@gmaill.com",
       "neighborhood": "Downtown",
       "bio": "React enthusiast and coding tutor"
     },
@@ -108,28 +162,44 @@
       "email": "john@example.com",
       "neighborhood": "Westside",
       "bio": "Certified yoga instructor"
-    }
-  ],
-  "favorites": [
-    {
-      "id": "89ba",
-      "skillId": "7",
-      "userId": 1,
-      "createdAt": "2025-07-24T10:02:34.850Z"
     },
     {
-      "id": "a8cf",
-      "skillId": "6",
-      "userId": 1,
-      "createdAt": "2025-07-24T10:02:38.563Z"
+      "id": "6",
+      "name": "Nathan Kim",
+      "email": "nathan@example.com",
+      "neighborhood": "Eastside",
+      "bio": "Tech support specialist"
     },
     {
-      "id": "692d",
-      "skillId": "5",
-      "userId": 1,
-      "createdAt": "2025-07-24T10:02:42.232Z"
+      "id": "7",
+      "name": "Lisa Wong",
+      "email": "lisa@example.com",
+      "neighborhood": "Westside",
+      "bio": "Fitness coach"
+    },
+    {
+      "id": "8",
+      "name": "Omar Malik",
+      "email": "omar@example.com",
+      "neighborhood": "Downtown",
+      "bio": "Business mentor and recruiter"
+    },
+    {
+      "id": "9",
+      "name": "Tasha Brown",
+      "email": "tasha@example.com",
+      "neighborhood": "Midtown",
+      "bio": "Dancer and choreographer"
+    },
+    {
+      "id": "10",
+      "name": "Victor Okello",
+      "email": "victor@example.com",
+      "neighborhood": "Eastside",
+      "bio": "DIY and garden lover"
     }
   ],
+  "favorites": [],
   "categories": [
     {
       "id": "1",
@@ -154,6 +224,30 @@
     {
       "id": "6",
       "name": "Health"
+    },
+    {
+      "id": "7",
+      "name": "Tech Support"
+    },
+    {
+      "id": "8",
+      "name": "Fitness"
+    },
+    {
+      "id": "9",
+      "name": "Business"
+    },
+    {
+      "id": "10",
+      "name": "Dance"
+    },
+    {
+      "id": "11",
+      "name": "Gardening"
+    },
+    {
+      "id": "12",
+      "name": "DIY"
     }
   ]
 }
