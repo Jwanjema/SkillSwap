@@ -9,12 +9,15 @@
 
 .home-page {
   min-height: 100vh;
-  background: var(--bg-gradient);
+  background: url('public/skillswap-bg.jpg') no-repeat center center;
+  background-size: cover;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 2rem;
 }
+
+
 
 .hero-section {
   text-align: center;
