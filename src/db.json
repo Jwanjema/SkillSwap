@@ -44,6 +44,15 @@
       "neighborhood": "Downtown",
       "userId": 1,
       "createdAt": "2025-07-23T18:45:20.869Z"
+    },
+    {
+      "id": "8f46",
+      "title": "hbvefujvre",
+      "description": "hjbsvje vrib",
+      "category": "Music",
+      "neighborhood": "yuvfbre",
+      "userId": 1,
+      "createdAt": "2025-07-24T07:27:53.911Z"
     }
   ],
   "users": [
@@ -75,6 +84,24 @@
       "skillId": "2",
       "userId": 1,
       "createdAt": "2025-07-22T18:00:29.375Z"
+    },
+    {
+      "id": "bc87",
+      "skillId": "1",
+      "userId": 1,
+      "createdAt": "2025-07-24T07:26:48.445Z"
+    },
+    {
+      "id": "6473",
+      "skillId": "8cea",
+      "userId": 1,
+      "createdAt": "2025-07-24T07:27:05.070Z"
+    },
+    {
+      "id": "fe37",
+      "skillId": "8f46",
+      "userId": 1,
+      "createdAt": "2025-07-24T07:27:58.307Z"
     }
   ],
   "categories": [
