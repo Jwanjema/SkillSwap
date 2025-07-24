@@ -1,60 +1,96 @@
 .skill-card {
-  background: white;
-  border-radius: 8px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
   padding: 1rem;
+  margin: 1rem;
+  background-color: #fff;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  position: relative;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.skill-card h3 {
-  margin-bottom: 0.5rem;
-  color: var(--primary);
-}
-
-.skill-meta {
+.card-header {
   display: flex;
   justify-content: space-between;
-  margin-top: 1rem;
-  color: #666;
-  font-size: 0.9rem;
+  align-items: center;
 }
 
-.favorite-btn {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  background: none;
+.category-badge {
+  background-color: #eef;
+  color: #336;
+  padding: 4px 8px;
+  border-radius: 8px;
+  font-size: 0.75rem;
+}
+
+.description {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+  color: #444;
+}
+
+.creator-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+}
+
+.creator-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.neighborhood {
+  margin-left: auto;
+  font-size: 0.75rem;
+  color: #777;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.favorite-btn,
+.remove-btn {
   border: none;
+  background-color: transparent;
   font-size: 1.2rem;
   cursor: pointer;
+  transition: all 0.2s ease;
+  color: #555;
 }
 
 .favorite-btn.active {
   color: red;
 }
 
-.creator-info {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin: 1rem 0;
+.remove-btn {
+  padding: 6px 10px;
+  font-size: 0.85rem;
+  background-color: #eee;
+  border-radius: 6px;
+  color: #444;
 }
 
-.creator-avatar {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-}
-
-.category-badge {
-  background: var(--primary);
-  color: white;
-  padding: 0.25rem 0.5rem;
-  border-radius: 12px;
-  font-size: 0.8rem;
+.remove-btn:hover {
+  background-color: #f44336;
+  color: #fff;
 }
 
 .date {
-  font-size: 0.8rem;
-  color: #666;
+  font-size: 0.75rem;
+  color: #999;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1rem;
 }
