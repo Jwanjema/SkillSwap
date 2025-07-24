@@ -46,13 +46,31 @@
       "createdAt": "2025-07-23T18:45:20.869Z"
     },
     {
-      "id": "8f46",
-      "title": "hbvefujvre",
-      "description": "hjbsvje vrib",
-      "category": "Music",
-      "neighborhood": "yuvfbre",
-      "userId": 1,
-      "createdAt": "2025-07-24T07:27:53.911Z"
+      "id": "5",
+      "title": "Photography Basics",
+      "description": "Learn how to take stunning portraits with a DSLR",
+      "category": "Art",
+      "neighborhood": "Eastside",
+      "userId": 4,
+      "createdAt": "2025-07-21T12:00:00Z"
+    },
+    {
+      "id": "6",
+      "title": "Yoga for Beginners",
+      "description": "Relax and improve your flexibility with basic yoga",
+      "category": "Health",
+      "neighborhood": "Westside",
+      "userId": 5,
+      "createdAt": "2025-07-21T14:15:00Z"
+    },
+    {
+      "id": "7",
+      "title": "Sculpting Workshop",
+      "description": "Create your own clay masterpiece",
+      "category": "Art",
+      "neighborhood": "Downtown",
+      "userId": 4,
+      "createdAt": "2025-07-22T17:45:00Z"
     }
   ],
   "users": [
@@ -76,32 +94,28 @@
       "email": "jamie@example.com",
       "neighborhood": "Midtown",
       "bio": "Professional musician"
+    },
+    {
+      "id": "4",
+      "name": "Emily Davis",
+      "email": "emily@example.com",
+      "neighborhood": "Eastside",
+      "bio": "Visual artist and photographer"
+    },
+    {
+      "id": "5",
+      "name": "John Lee",
+      "email": "john@example.com",
+      "neighborhood": "Westside",
+      "bio": "Certified yoga instructor"
     }
   ],
   "favorites": [
     {
-      "id": "b1a2",
-      "skillId": "2",
+      "id": "89ba",
+      "skillId": "7",
       "userId": 1,
-      "createdAt": "2025-07-22T18:00:29.375Z"
-    },
-    {
-      "id": "bc87",
-      "skillId": "1",
-      "userId": 1,
-      "createdAt": "2025-07-24T07:26:48.445Z"
-    },
-    {
-      "id": "6473",
-      "skillId": "8cea",
-      "userId": 1,
-      "createdAt": "2025-07-24T07:27:05.070Z"
-    },
-    {
-      "id": "fe37",
-      "skillId": "8f46",
-      "userId": 1,
-      "createdAt": "2025-07-24T07:27:58.307Z"
+      "createdAt": "2025-07-24T10:02:34.850Z"
     }
   ],
   "categories": [
@@ -124,6 +138,10 @@
     {
       "id": "5",
       "name": "Art"
+    },
+    {
+      "id": "6",
+      "name": "Health"
     }
   ]
 }
