@@ -1,272 +1,147 @@
 {
   "skills": [
     {
-      "id": 1,
+      "id": "1",
       "title": "React Tutoring",
-      "description": "Learn React hooks and modern practices with hands-on projects",
+      "description": "Learn React hooks and modern practices",
       "category": "Coding",
       "neighborhood": "Downtown",
       "userId": 1,
       "createdAt": "2023-11-15T10:00:00Z"
     },
     {
-      "id": 2,
+      "id": "2",
       "title": "Spanish Lessons",
-      "description": "Conversational Spanish for beginners - we'll practice real-life scenarios",
+      "description": "Conversational Spanish for beginners",
       "category": "Language",
       "neighborhood": "Westside",
       "userId": 2,
       "createdAt": "2023-11-16T11:30:00Z"
     },
     {
-      "id": 3,
+      "id": "3",
       "title": "Guitar Lessons",
-      "description": "Acoustic guitar for all levels - from chords to fingerstyle techniques",
+      "description": "Acoustic guitar for all levels",
       "category": "Music",
       "neighborhood": "Midtown",
       "userId": 3,
       "createdAt": "2023-11-17T09:15:00Z"
     },
     {
-      "id": 4,
-      "title": "Sourdough Baking",
-      "description": "Master the art of sourdough bread making from starter to finished loaf",
+      "id": "4",
+      "title": "Cooking",
+      "description": "I will teach how to cook",
       "category": "Cooking",
-      "neighborhood": "East End",
-      "userId": 4,
-      "createdAt": "2023-11-18T14:20:00Z"
+      "neighborhood": "Downtown",
+      "userId": 1,
+      "createdAt": "2025-07-22T16:34:57.102Z"
     },
     {
-      "id": 5,
-      "title": "Yoga for Beginners",
-      "description": "Gentle yoga sessions to improve flexibility and reduce stress",
-      "category": "Fitness",
-      "neighborhood": "Lakeside",
-      "userId": 5,
-      "createdAt": "2023-11-19T08:45:00Z"
+      "id": "8cea",
+      "title": "Coding",
+      "description": "coding",
+      "category": "Coding",
+      "neighborhood": "Downtown",
+      "userId": 1,
+      "createdAt": "2025-07-23T18:45:20.869Z"
     },
     {
-      "id": 6,
-      "title": "Portrait Photography",
-      "description": "Learn lighting, composition and editing for stunning portraits",
+      "id": "5",
+      "title": "Photography Basics",
+      "description": "Learn how to take stunning portraits with a DSLR",
       "category": "Art",
-      "neighborhood": "North District",
-      "userId": 6,
-      "createdAt": "2023-11-20T13:10:00Z"
+      "neighborhood": "Eastside",
+      "userId": 4,
+      "createdAt": "2025-07-21T12:00:00Z"
     },
     {
-      "id": 7,
-      "title": "Car Maintenance Basics",
-      "description": "DIY oil changes, tire rotations and basic troubleshooting",
-      "category": "DIY",
-      "neighborhood": "Industrial Zone",
-      "userId": 7,
-      "createdAt": "2023-11-21T16:30:00Z"
+      "id": "6",
+      "title": "Yoga for Beginners",
+      "description": "Relax and improve your flexibility with basic yoga",
+      "category": "Health",
+      "neighborhood": "Westside",
+      "userId": 5,
+      "createdAt": "2025-07-21T14:15:00Z"
     },
     {
-      "id": 8,
-      "title": "Mandarin Conversation",
-      "description": "Practical Mandarin Chinese for travelers and business professionals",
-      "category": "Language",
-      "neighborhood": "Chinatown",
-      "userId": 8,
-      "createdAt": "2023-11-22T10:20:00Z"
-    },
-    {
-      "id": 9,
-      "title": "Knitting Workshop",
-      "description": "From basic stitches to creating your first scarf or hat",
-      "category": "Craft",
-      "neighborhood": "Riverside",
-      "userId": 9,
-      "createdAt": "2023-11-23T11:15:00Z"
-    },
-    {
-      "id": 10,
-      "title": "Personal Finance 101",
-      "description": "Budgeting, investing and debt management strategies",
-      "category": "Finance",
-      "neighborhood": "Business District",
-      "userId": 10,
-      "createdAt": "2023-11-24T09:30:00Z"
-    },
-    {
-      "id": 11,
-      "title": "Urban Gardening",
-      "description": "Grow herbs and vegetables in small spaces and containers",
-      "category": "Gardening",
-      "neighborhood": "Green Valley",
-      "userId": 11,
-      "createdAt": "2023-11-25T14:45:00Z"
-    },
-    {
-      "id": 12,
-      "title": "Public Speaking",
-      "description": "Overcome stage fright and deliver compelling presentations",
-      "category": "Communication",
-      "neighborhood": "Convention Area",
-      "userId": 12,
-      "createdAt": "2023-11-26T10:10:00Z"
-    },
-    {
-      "id": 13,
-      "title": "Mixology Class",
-      "description": "Craft cocktails and learn bartending fundamentals",
-      "category": "Entertainment",
-      "neighborhood": "Nightlife District",
-      "userId": 13,
-      "createdAt": "2023-11-27T19:00:00Z"
+      "id": "7",
+      "title": "Sculpting Workshop",
+      "description": "Create your own clay masterpiece",
+      "category": "Art",
+      "neighborhood": "Downtown",
+      "userId": 4,
+      "createdAt": "2025-07-22T17:45:00Z"
     }
   ],
   "users": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Alex Johnson",
       "email": "alex@example.com",
       "neighborhood": "Downtown",
-      "bio": "Frontend developer with 5 years of React experience"
+      "bio": "React enthusiast and coding tutor"
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Maria Garcia",
       "email": "maria@example.com",
       "neighborhood": "Westside",
-      "bio": "Native Spanish speaker from Madrid"
+      "bio": "Native Spanish speaker"
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Jamie Smith",
       "email": "jamie@example.com",
       "neighborhood": "Midtown",
-      "bio": "Professional musician and guitar instructor"
+      "bio": "Professional musician"
     },
     {
-      "id": 4,
-      "name": "Sam Wilson",
-      "email": "sam@example.com",
-      "neighborhood": "East End",
-      "bio": "Artisan baker and fermentation enthusiast"
+      "id": "4",
+      "name": "Emily Davis",
+      "email": "emily@example.com",
+      "neighborhood": "Eastside",
+      "bio": "Visual artist and photographer"
     },
     {
-      "id": 5,
-      "name": "Taylor Chen",
-      "email": "taylor@example.com",
-      "neighborhood": "Lakeside",
-      "bio": "Certified yoga instructor with 10 years experience"
-    },
-    {
-      "id": 6,
-      "name": "Jordan Lee",
-      "email": "jordan@example.com",
-      "neighborhood": "North District",
-      "bio": "Professional photographer specializing in portraits"
-    },
-    {
-      "id": 7,
-      "name": "Casey Brown",
-      "email": "casey@example.com",
-      "neighborhood": "Industrial Zone",
-      "bio": "Mechanic with 15 years in automotive repair"
-    },
-    {
-      "id": 8,
-      "name": "Wei Zhang",
-      "email": "wei@example.com",
-      "neighborhood": "Chinatown",
-      "bio": "Mandarin teacher and cultural consultant"
-    },
-    {
-      "id": 9,
-      "name": "Morgan Taylor",
-      "email": "morgan@example.com",
-      "neighborhood": "Riverside",
-      "bio": "Fiber artist and knitting pattern designer"
-    },
-    {
-      "id": 10,
-      "name": "Riley Jones",
-      "email": "riley@example.com",
-      "neighborhood": "Business District",
-      "bio": "Financial advisor specializing in personal finance"
-    },
-    {
-      "id": 11,
-      "name": "Skyler White",
-      "email": "skyler@example.com",
-      "neighborhood": "Green Valley",
-      "bio": "Urban farming advocate and sustainability expert"
-    },
-    {
-      "id": 12,
-      "name": "Dakota Scott",
-      "email": "dakota@example.com",
-      "neighborhood": "Convention Area",
-      "bio": "Public speaking coach and former debate champion"
-    },
-    {
-      "id": 13,
-      "name": "Charlie Nguyen",
-      "email": "charlie@example.com",
-      "neighborhood": "Nightlife District",
-      "bio": "Professional mixologist and bar consultant"
+      "id": "5",
+      "name": "John Lee",
+      "email": "john@example.com",
+      "neighborhood": "Westside",
+      "bio": "Certified yoga instructor"
     }
   ],
   "favorites": [
     {
-      "id": 1,
-      "skillId": 2,
+      "id": "89ba",
+      "skillId": "7",
       "userId": 1,
-      "createdAt": "2023-11-18T14:20:00Z"
+      "createdAt": "2025-07-24T10:02:34.850Z"
     }
   ],
   "categories": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Coding"
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Language"
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Music"
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "Cooking"
     },
     {
-      "id": 5,
-      "name": "Fitness"
-    },
-    {
-      "id": 6,
+      "id": "5",
       "name": "Art"
     },
     {
-      "id": 7,
-      "name": "DIY"
-    },
-    {
-      "id": 8,
-      "name": "Craft"
-    },
-    {
-      "id": 9,
-      "name": "Finance"
-    },
-    {
-      "id": 10,
-      "name": "Gardening"
-    },
-    {
-      "id": 11,
-      "name": "Communication"
-    },
-    {
-      "id": 12,
-      "name": "Entertainment"
+      "id": "6",
+      "name": "Health"
     }
   ]
 }
