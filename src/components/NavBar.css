@@ -7,11 +7,10 @@
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-.logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  text-decoration: none;
-  color: var(--primary);
+.logo img {
+  width: 120px;  
+  height: auto;
+  display: block;
 }
 
 .nav-links {
