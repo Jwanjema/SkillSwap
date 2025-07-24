@@ -125,6 +125,33 @@
       "neighborhood": "Eastside",
       "userId": 1,
       "createdAt": "2025-07-24T13:09:57.760Z"
+    },
+    {
+      "id": "ef61",
+      "title": "Writing",
+      "description": "Im a coding writer",
+      "category": "Coding",
+      "neighborhood": "mwihoko",
+      "userId": 1,
+      "createdAt": "2025-07-24T15:16:53.677Z"
+    },
+    {
+      "id": "e39b",
+      "title": "Graphic Design",
+      "description": "everything tha design offers",
+      "category": "Art",
+      "neighborhood": "mwihoko",
+      "userId": 1,
+      "createdAt": "2025-07-24T15:37:43.233Z"
+    },
+    {
+      "id": "96d5",
+      "title": "graphic design",
+      "description": "everything that design offers",
+      "category": "Art",
+      "neighborhood": "mwihoko",
+      "userId": 1,
+      "createdAt": "2025-07-24T15:40:04.165Z"
     }
   ],
   "users": [
