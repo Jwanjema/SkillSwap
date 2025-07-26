@@ -3,6 +3,7 @@ import axios from 'axios'
 import SkillList from '../components/SkillList'
 import SearchBar from '../components/SearchBar'
 import './SkillsPage.css'
+const BASE_URL = import.meta.env.VITE_API_URL
 
 export default function SkillsPage() {
   const [skills, setSkills] = useState([])
@@ -12,7 +13,7 @@ export default function SkillsPage() {
   const [nearMe, setNearMe] = useState(false)
 
   useEffect(() => {
-    axios.get('http://localhost:3000/skills')
+    axios.get(`${BASE_URL}/skills`)
       .then(res => {
         setSkills(res.data)
         setFilteredSkills(res.data)

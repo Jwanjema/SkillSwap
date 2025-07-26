@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import './AddSkillForm.css';
+const BASE_URL = import.meta.env.VITE_API_URL;
+
 
 function AddSkillForm({ onSubmit }) {
   const [formData, setFormData] = useState({

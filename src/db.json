@@ -152,6 +152,15 @@
       "neighborhood": "mwihoko",
       "userId": 1,
       "createdAt": "2025-07-24T15:40:04.165Z"
+    },
+    {
+      "id": "bd79",
+      "title": "cooking",
+      "description": "fast cooking",
+      "category": "Cooking",
+      "neighborhood": "Nairobi",
+      "userId": 1,
+      "createdAt": "2025-07-25T03:58:35.578Z"
     }
   ],
   "users": [
@@ -226,7 +235,20 @@
       "bio": "DIY and garden lover"
     }
   ],
-  "favorites": [],
+  "favorites": [
+    {
+      "id": "9a80",
+      "skillId": "2",
+      "userId": 1,
+      "createdAt": "2025-07-25T03:57:28.270Z"
+    },
+    {
+      "id": "6fe9",
+      "skillId": "1",
+      "userId": 1,
+      "createdAt": "2025-07-25T03:57:30.027Z"
+    }
+  ],
   "categories": [
     {
       "id": "1",
