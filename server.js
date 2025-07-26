@@ -1,22 +1,29 @@
-// server.js
-const jsonServer = require("json-server");
-const server = jsonServer.create();
-const router = jsonServer.router("db.json");
-const middlewares = jsonServer.defaults();
+const express = require('express');
+const app = express();
 
-// Enable CORS
-server.use((req, res, next) => {
-  res.header("Access-Control-Allow-Origin", "*"); // or replace * with your frontend URL
-  res.header("Access-Control-Allow-Methods", "GET, POST, PATCH, DELETE");
-  res.header("Access-Control-Allow-Headers", "Content-Type");
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
+  res.header("Access-Control-Allow-Headers", "Content-Type, Accept, Authorization");
   next();
 });
 
-server.use(middlewares);
-server.use(router);
+app.get('/users/:id', (req, res) => {
+  // ...
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
+  res.header("Access-Control-Allow-Headers", "Content-Type, Accept");
+  res.json(data);
+});
 
-// Use Render's assigned port
-const PORT = process.env.PORT || 3000;
-server.listen(PORT, () => {
-  console.log(`JSON Server is running on port ${PORT}`);
+app.get('/skills', (req, res) => {
+  // ...
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
+  res.header("Access-Control-Allow-Headers", "Content-Type, Accept");
+  res.json(data);
+});
+
+app.listen(3000, () => {
+  console.log('Server listening on port 3000');
 });
