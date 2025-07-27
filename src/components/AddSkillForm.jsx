@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import './AddSkillForm.css';
-const BASE_URL = import.meta.env.VITE_API_URL;
 
+const BASE_URL = import.meta.env.VITE_API_URL;
 
 function AddSkillForm({ onSubmit }) {
   const [formData, setFormData] = useState({
@@ -19,7 +19,7 @@ function AddSkillForm({ onSubmit }) {
   const [submitSuccess, setSubmitSuccess] = useState(false);
 
   useEffect(() => {
-    axios.get('http://localhost:3000/categories')
+    axios.get(`${BASE_URL}/categories`)
       .then(res => setCategories(res.data))
       .catch(err => console.error(err));
   }, []);
@@ -56,7 +56,7 @@ function AddSkillForm({ onSubmit }) {
         createdAt: new Date().toISOString()
       };
 
-      const response = await axios.post('http://localhost:3000/skills', completeFormData);
+      const response = await axios.post(`${BASE_URL}/skills`, completeFormData);
       onSubmit(response.data);
       setSubmitSuccess(true);
       setTimeout(() => setSubmitSuccess(false), 3000);
@@ -77,8 +77,6 @@ function AddSkillForm({ onSubmit }) {
 
   return (
     <div className="add-skill-form">
-      {/* <h3 className="form-header">Share Your Skill</h3> */}
-
       <form onSubmit={handleSubmit}>
         <div className={`form-group ${errors.title ? 'error' : ''}`}>
           <label>Skill Title *</label>
