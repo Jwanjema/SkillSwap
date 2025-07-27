@@ -58,15 +58,15 @@ export default function SkillCard({ skill, onRemoveFavorite, isOwnSkill, onDelet
     }
   };
 
-  const handleEditClick = () => {
-    if (onEdit) {
-      onEdit(skill);
+  const handleDeleteClick = () => {
+    if (onDelete) {
+      onDelete(skill.id);
     }
   };
 
-  const handleDeleteClick = () => {
-    if (onDelete && confirm("Are you sure you want to delete this skill?")) {
-      onDelete(skill.id);
+  const handleEditClick = () => {
+    if (onEdit) {
+      onEdit(skill);
     }
   };
 
@@ -111,9 +111,7 @@ export default function SkillCard({ skill, onRemoveFavorite, isOwnSkill, onDelet
             {isFavorite ? '♥' : '♡'}
           </button>
         )}
-        <span className="date">
-          {new Date(skill.createdAt).toLocaleDateString()}
-        </span>
+        <span className="date">{new Date(skill.createdAt).toLocaleDateString()}</span>
       </div>
     </div>
   );
