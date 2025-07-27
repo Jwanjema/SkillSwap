@@ -1,7 +1,7 @@
 import SkillCard from './SkillCard';
 import './SkillList.css';
 
-export default function SkillList({ skills, onRemoveFavorite }) {
+export default function SkillList({ skills, onRemoveFavorite, isOwnSkill, onDeleteSkill, onEditSkill }) {
   return (
     <div className="skill-list">
       {skills.length > 0 ? (
@@ -10,6 +10,9 @@ export default function SkillList({ skills, onRemoveFavorite }) {
             <SkillCard
               key={skill.id}
               skill={skill}
+              isOwnSkill={isOwnSkill}
+              onDelete={onDeleteSkill}
+              onEdit={onEditSkill}
               onRemoveFavorite={onRemoveFavorite}
             />
           ))}

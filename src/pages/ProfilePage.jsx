@@ -3,7 +3,7 @@ import axios from 'axios';
 import SkillList from '../components/SkillList';
 import './ProfilePage.css';
 
-const BASE_URL = import.meta.env.VITE_API_BASE_URL;
+const BASE_URL = import.meta.env.VITE_API_URL;
 
 export default function ProfilePage() {
   const [user, setUser] = useState(null);
@@ -17,16 +17,29 @@ export default function ProfilePage() {
       axios.get(`${BASE_URL}/users/${userId}`),
       axios.get(`${BASE_URL}/skills?userId=${userId}`)
     ])
-    .then(axios.spread((userRes, skillsRes) => {
-      console.log("User API response:", userRes.data);
-      console.log("Skills API response:", skillsRes.data);
-
-      setUser(userRes.data);
-      setUserSkills(Array.isArray(skillsRes.data) ? skillsRes.data : []);
-    }))
-    .catch(err => console.error("Error fetching profile data:", err))
-    .finally(() => setLoading(false));
+      .then(axios.spread((userRes, skillsRes) => {
+        setUser(userRes.data);
+        setUserSkills(Array.isArray(skillsRes.data) ? skillsRes.data : []);
+      }))
+      .catch(err => console.error("Error fetching profile data:", err))
+      .finally(() => setLoading(false));
   }, []);
+
+  const handleDeleteSkill = (skillId) => {
+    if (!window.confirm('Are you sure you want to delete this skill?')) return;
+
+    axios.delete(`${BASE_URL}/skills/${skillId}`)
+      .then(() => {
+        setUserSkills(prev => prev.filter(skill => skill.id !== skillId));
+      })
+      .catch(err => console.error('Error deleting skill:', err));
+  };
+
+  const handleEditSkill = (skill) => {
+    // For now just log the skill. You can open a modal/form here.
+    console.log('Edit skill:', skill);
+    alert(`You clicked edit for "${skill.title}". Implement the edit form or modal.`);
+  };
 
   if (loading) return <div className="loading">Loading profile...</div>;
   if (!user) return <div className="error">User not found</div>;
@@ -34,8 +47,8 @@ export default function ProfilePage() {
   return (
     <div className="profile-page">
       <div className="profile-header">
-        <img 
-          src={`https://i.pravatar.cc/150?u=${user.id}`} 
+        <img
+          src={`https://i.pravatar.cc/150?u=${user.id}`}
           alt={user.name}
           className="profile-avatar"
         />
@@ -48,7 +61,12 @@ export default function ProfilePage() {
       </div>
 
       <h2>My Offered Skills</h2>
-      <SkillList skills={userSkills} />
+      <SkillList
+        skills={userSkills}
+        isOwnSkill={true}
+        onDeleteSkill={handleDeleteSkill}
+        onEditSkill={handleEditSkill}
+      />
     </div>
   );
 }

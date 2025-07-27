@@ -4,7 +4,7 @@ import './SkillCard.css';
 
 const API_URL = import.meta.env.VITE_API_URL;
 
-export default function SkillCard({ skill, onRemoveFavorite }) {
+export default function SkillCard({ skill, onRemoveFavorite, isOwnSkill, onDelete, onEdit }) {
   const [creator, setCreator] = useState(null);
   const [isFavorite, setIsFavorite] = useState(false);
   const [favoriteId, setFavoriteId] = useState(null);
@@ -15,12 +15,10 @@ export default function SkillCard({ skill, onRemoveFavorite }) {
       .then(res => setCreator(res.data))
       .catch(err => console.error('User fetch error:', err));
 
-    // If coming from favorites page, use passed favoriteId
     if (skill.favoriteId) {
       setIsFavorite(true);
       setFavoriteId(skill.favoriteId);
     } else {
-      // Check if the skill is already favorited
       axios.get(`${API_URL}/favorites?skillId=${skill.id}&userId=1`)
         .then(res => {
           if (res.data.length > 0) {
@@ -34,7 +32,6 @@ export default function SkillCard({ skill, onRemoveFavorite }) {
 
   const handleToggleFavorite = () => {
     if (isFavorite) {
-      // Remove from favorites
       if (!favoriteId) return;
       axios.delete(`${API_URL}/favorites/${favoriteId}`)
         .then(() => {
@@ -43,7 +40,6 @@ export default function SkillCard({ skill, onRemoveFavorite }) {
         })
         .catch(err => console.error('Favorite removal error:', err));
     } else {
-      // Add to favorites
       axios.post(`${API_URL}/favorites`, {
         skillId: skill.id,
         userId: 1,
@@ -69,9 +65,9 @@ export default function SkillCard({ skill, onRemoveFavorite }) {
         <h3>{skill.title}</h3>
         <span className="category-badge">{skill.category}</span>
       </div>
-      
+
       <p className="description">{skill.description}</p>
-      
+
       <div className="creator-info">
         {creator && (
           <>
@@ -85,9 +81,17 @@ export default function SkillCard({ skill, onRemoveFavorite }) {
         )}
         <span className="neighborhood">{skill.neighborhood}</span>
       </div>
-      
+
       <div className="card-footer">
-        {onRemoveFavorite ? (
+        {isOwnSkill ? (
+          <>
+            <div className="edit-delete-buttons">
+  <button className="edit-btn" onClick={handleEditClick}>Edit</button>
+  <button className="delete-btn" onClick={handleDeleteClick}>Delete</button>
+</div>
+
+          </>
+        ) : onRemoveFavorite ? (
           <button className="remove-btn" onClick={handleRemoveClick}>
             Remove from Favorites
           </button>
