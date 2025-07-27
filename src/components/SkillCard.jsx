@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import './SkillCard.css';
 
+const API_URL = import.meta.env.VITE_API_URL;
+
 export default function SkillCard({ skill, onRemoveFavorite }) {
   const [creator, setCreator] = useState(null);
   const [isFavorite, setIsFavorite] = useState(false);
@@ -9,7 +11,7 @@ export default function SkillCard({ skill, onRemoveFavorite }) {
 
   useEffect(() => {
     // Fetch creator info
-    axios.get(`http://localhost:3000/users/${skill.userId}`)
+    axios.get(`${API_URL}/users/${skill.userId}`)
       .then(res => setCreator(res.data))
       .catch(err => console.error('User fetch error:', err));
 
@@ -19,7 +21,7 @@ export default function SkillCard({ skill, onRemoveFavorite }) {
       setFavoriteId(skill.favoriteId);
     } else {
       // Check if the skill is already favorited
-      axios.get(`http://localhost:3000/favorites?skillId=${skill.id}&userId=1`)
+      axios.get(`${API_URL}/favorites?skillId=${skill.id}&userId=1`)
         .then(res => {
           if (res.data.length > 0) {
             setIsFavorite(true);
@@ -34,7 +36,7 @@ export default function SkillCard({ skill, onRemoveFavorite }) {
     if (isFavorite) {
       // Remove from favorites
       if (!favoriteId) return;
-      axios.delete(`http://localhost:3000/favorites/${favoriteId}`)
+      axios.delete(`${API_URL}/favorites/${favoriteId}`)
         .then(() => {
           setIsFavorite(false);
           setFavoriteId(null);
@@ -42,7 +44,7 @@ export default function SkillCard({ skill, onRemoveFavorite }) {
         .catch(err => console.error('Favorite removal error:', err));
     } else {
       // Add to favorites
-      axios.post('http://localhost:3000/favorites', {
+      axios.post(`${API_URL}/favorites`, {
         skillId: skill.id,
         userId: 1,
         createdAt: new Date().toISOString()

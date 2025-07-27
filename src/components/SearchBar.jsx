@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import './SearchBar.css';
 
+const API_URL = import.meta.env.VITE_API_URL;
+
 export default function SearchBar({ 
   searchTerm, 
   setSearchTerm,
@@ -13,7 +15,7 @@ export default function SearchBar({
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:3000/categories')
+    axios.get(`${API_URL}/categories`)
       .then(res => setCategories(res.data))
       .catch(err => console.error(err));
   }, []);

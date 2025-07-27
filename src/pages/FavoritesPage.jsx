@@ -3,6 +3,8 @@ import axios from 'axios';
 import SkillList from '../components/SkillList';
 import './FavoritesPage.css';
 
+const BASE_URL = import.meta.env.VITE_API_BASE_URL;
+
 export default function FavoritesPage() {
   const [favorites, setFavorites] = useState([]);
   const [skills, setSkills] = useState([]);
@@ -10,8 +12,8 @@ export default function FavoritesPage() {
 
   useEffect(() => {
     Promise.all([
-      axios.get('http://localhost:3000/favorites'),
-      axios.get('http://localhost:3000/skills')
+      axios.get(`${BASE_URL}/favorites`),
+      axios.get(`${BASE_URL}/skills`)
     ])
       .then(([favoritesRes, skillsRes]) => {
         setFavorites(favoritesRes.data);
@@ -29,9 +31,8 @@ export default function FavoritesPage() {
   }, []);
 
   const handleRemoveFavorite = (favoriteId) => {
-    axios.delete(`http://localhost:3000/favorites/${favoriteId}`)
+    axios.delete(`${BASE_URL}/favorites/${favoriteId}`)
       .then(() => {
-        // Remove from state
         const updatedSkills = favoriteSkills.filter(skill => skill.favoriteId !== favoriteId);
         setFavoriteSkills(updatedSkills);
       })
