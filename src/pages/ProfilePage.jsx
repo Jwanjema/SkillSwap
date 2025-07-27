@@ -18,10 +18,13 @@ export default function ProfilePage() {
       axios.get(`${BASE_URL}/skills?userId=${userId}`)
     ])
     .then(axios.spread((userRes, skillsRes) => {
+      console.log("User API response:", userRes.data);
+      console.log("Skills API response:", skillsRes.data);
+
       setUser(userRes.data);
-      setUserSkills(skillsRes.data);
+      setUserSkills(Array.isArray(skillsRes.data) ? skillsRes.data : []);
     }))
-    .catch(err => console.error(err))
+    .catch(err => console.error("Error fetching profile data:", err))
     .finally(() => setLoading(false));
   }, []);
 
