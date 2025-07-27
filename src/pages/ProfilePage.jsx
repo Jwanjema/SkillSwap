@@ -3,6 +3,8 @@ import axios from 'axios';
 import SkillList from '../components/SkillList';
 import './ProfilePage.css';
 
+const BASE_URL = import.meta.env.VITE_API_BASE_URL;
+
 export default function ProfilePage() {
   const [user, setUser] = useState(null);
   const [userSkills, setUserSkills] = useState([]);
@@ -12,8 +14,8 @@ export default function ProfilePage() {
     const userId = 1;
 
     axios.all([
-      axios.get(`http://localhost:3000/users/${userId}`),
-      axios.get(`http://localhost:3000/skills?userId=${userId}`)
+      axios.get(`${BASE_URL}/users/${userId}`),
+      axios.get(`${BASE_URL}/skills?userId=${userId}`)
     ])
     .then(axios.spread((userRes, skillsRes) => {
       setUser(userRes.data);
