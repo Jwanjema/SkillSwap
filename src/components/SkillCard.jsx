@@ -10,7 +10,6 @@ export default function SkillCard({ skill, onRemoveFavorite, isOwnSkill, onDelet
   const [favoriteId, setFavoriteId] = useState(null);
 
   useEffect(() => {
-    // Fetch creator info
     axios.get(`${API_URL}/users/${skill.userId}`)
       .then(res => setCreator(res.data))
       .catch(err => console.error('User fetch error:', err));
@@ -59,6 +58,18 @@ export default function SkillCard({ skill, onRemoveFavorite, isOwnSkill, onDelet
     }
   };
 
+  const handleEditClick = () => {
+    if (onEdit) {
+      onEdit(skill);
+    }
+  };
+
+  const handleDeleteClick = () => {
+    if (onDelete && confirm("Are you sure you want to delete this skill?")) {
+      onDelete(skill.id);
+    }
+  };
+
   return (
     <div className="skill-card">
       <div className="card-header">
@@ -84,13 +95,10 @@ export default function SkillCard({ skill, onRemoveFavorite, isOwnSkill, onDelet
 
       <div className="card-footer">
         {isOwnSkill ? (
-          <>
-            <div className="edit-delete-buttons">
-  <button className="edit-btn" onClick={handleEditClick}>Edit</button>
-  <button className="delete-btn" onClick={handleDeleteClick}>Delete</button>
-</div>
-
-          </>
+          <div className="edit-delete-buttons">
+            <button className="edit-btn" onClick={handleEditClick}>Edit</button>
+            <button className="delete-btn" onClick={handleDeleteClick}>Delete</button>
+          </div>
         ) : onRemoveFavorite ? (
           <button className="remove-btn" onClick={handleRemoveClick}>
             Remove from Favorites
